@@ -4,17 +4,17 @@
 
 .header
 	position: fixed
+	top: 0
 	right: 0
 	left: 0
 	transition: all .3s
 	z-index: 1001
 
 	&--active, &--menu
-		background-color: rgba(0, 0, 0, .8)
-		padding: 5px 0
 
 
 	&__container
+		position: relative
 		background: $block
 		padding: 10px 0
 
@@ -24,18 +24,177 @@
 		padding-bottom: 15px
 
 	.container
+		position: relative
 		display: flex
 		justify-content: space-between
+		align-items: center
 
+	&__logo
+		
+		img
+			width: 53px
+			height: 35px
+			margin-right: 5px
+
+	&__language
+		position: relative
+		right: 0
+		text-transform: uppercase
+		color: #fff
+		font-weight: 700
+
+		&:hover,
+		&:focus
+			ul
+				display: block
+
+		span
+			display: block
+			padding: 0 5px
+			margin-bottom: 5px
+
+		ul
+			position: absolute
+			right: 0
+			background: $block
+			padding: 0 5px 5px 5px
+			display: none
+			
+		a
+			display: block
+			color: #fff
+			margin-bottom: 5px
+
+			&:hover,
+			&:focus
+				color: #fff
+				text-decoration: underline
+
+	&__account
+		position: relative
+		display: flex
+		align-items: center
+		text-transform: uppercase
+		font-weight: 700
+
+		&:hover,
+		&:focus
+			p
+				display: block
+
+		img
+			margin: 0 5px
+
+		span
+			color: #fff
+
+		p
+			position: absolute
+			right: 0
+			top: 150%
+			width: 250px
+			box-shadow: 0 0 9px rgba(0, 0, 0, 0.18)
+			border-radius: 5px
+			background-color: #ffffff
+			padding: 20px
+			color: $text
+			text-transform: none
+			font-weight: 400
+			text-align: left
+			display: none
+
+			&::before
+				content: ''
+				position: absolute
+				top: -20px
+				right: 15px
+				border-bottom: 10px solid #fff
+				border-left: 10px solid transparent
+				border-right: 10px solid transparent
+				border-top: 10px solid transparent
+
+
+	&__col
+		position: relative
+		text-align: center
+
+		&:hover,
+		&:focus
+			p
+				display: block
+
+		span
+			position: absolute
+			top: 0
+			right: 5px
+			display: block
+			width: 12px
+			height: 12px
+			background: $red
+			border-radius: 50%
+			font-size: 8px
+			line-height: 12px
+
+		p
+			position: absolute
+			right: 0
+			top: 150%
+			width: 256px
+			box-shadow: 0 0 9px rgba(0, 0, 0, 0.18)
+			border-radius: 5px
+			background-color: #ffffff
+			padding: 20px
+			color: $text
+			text-transform: none
+			font-weight: 400
+			text-align: left
+			display: none
+
+			&::before
+				content: ''
+				position: absolute
+				top: -20px
+				right: 15px
+				border-bottom: 10px solid #fff
+				border-left: 10px solid transparent
+				border-right: 10px solid transparent
+				border-top: 10px solid transparent
 
 	
+	.green
+		color: $green
+
+
+.logo
+	display: flex
+	align-items: center
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: 800
+
+	p
+		color: #fff
+
+	span
+		color: #b8a65f
+
+
 .nav
+	margin: 0 15px
+
+	&__btn
+		display: none
+
 	ul
 		display: flex
 		justify-content: space-between
 
 	li
-		margin-right: 55px
+		margin-right: 8px
+		color: #fff
+		font-size: 14px
+		line-height: 1
+
 		&:last-child
 			margin-right: 0
 
@@ -43,6 +202,7 @@
 		position: relative
 		z-index: 1
 		text-transform: uppercase
+		color: #fff
 
 		&::before
 			content: ''
@@ -50,23 +210,1264 @@
 			transform: scale(0)
 			transition: all .3s
 			position: absolute
-			bottom: 0
+			bottom: -17px
 			width: 100%
-			height: 1px
-			background-color: $accent
+			height: 5px
+			background-color: $green
 			z-index: -1
 
 		&:hover,
 		&:focus
-			color: $accent
+			color: #fff
 			text-decoration: none
 			&::before
 				transform: scale(1)
 
 
-.footer
-	height: 1000px
+.fixed
+	position: fixed
+	top: 30%
+	z-index: 999
 
+	a
+		display: block
+		width: 65px
+		height: 65px
+		margin-bottom: 20px
+
+		&:hover,
+		&:focus
+
+			img
+				animation: hover .3s linear 1 forwards
+
+	img
+		width: 65px
+		height: 65px
+		animation: hover-back .3s linear 1 forwards
+
+
+.main
+	margin-top: 120px
+
+
+.hero
+	padding-top: 75px
+	padding-bottom: 160px
+	background-image: url(../img/hero-bg.jpg)
+	// background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+
+	&__item
+		width: 42%
+		border-radius: 5px
+		border: 1px solid #ffffff
+		text-align: center
+		padding: 105px 50px 50px
+		transition: all .6s
+
+		&:hover
+			width: 50%
+			box-shadow: 0 0 38px rgba(120, 213, 0, 0.51)
+			border: none
+
+		img
+			display: block
+			margin: 0 auto 45px
+			height: 90px
+			width: auto
+			transition: all .6s
+
+
+.price
+	padding: 60px 0
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		max-width: 195px
+		text-align: center
+
+		img
+			display: block
+			margin: 0 auto 25px
+			height: 230px
+
+
+.orders
+	padding-top: 80px
+	padding-bottom: 145px
+	color: #fff
+	background-image: url(../img/orders-bg.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+
+	&__slider
+
+		&_item
+			border-radius: 5px
+			border: 1px solid #ffffff
+			line-height: 1
+
+			&--text
+				background: $green
+				color: #180d48
+				padding: 0 8px 10px 8px
+
+			img
+				margin-right: 15px
+
+			p
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				margin-bottom: 3px
+
+				b
+					text-transform: uppercase
+					font-size: 16px
+
+	&__img
+		width: 100%
+
+
+.why
+	padding-top: 65px
+	padding-bottom: 75px
+
+	img
+		display: block
+		margin: 0 auto 40px
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		width: 23%
+		text-align: center
+		text-transform: uppercase
+		padding-top: 35px
+		padding-bottom: 25px
+		line-height: 1
+
+		&:hover
+			box-shadow: 0 0 38px rgba(72, 65, 117, 0.5)
+			border-radius: 5px
+
+
+.reviews
+	padding-top: 75px
+	padding-bottom: 60px
+	background-image: url(../img/reviews-bg.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	color: #fff
+
+	h2
+		span
+			color: $green
+
+	&__item
+		display: flex !important
+		flex-direction: column
+		justify-content: space-between
+		background: #fff
+		border-radius: 5px
+		padding: 15px 20px 20px
+		color: $text
+		text-align: center
+		font-size: 16px
+		height: 270px
+
+		&_rating
+			display: flex
+			justify-content: center
+			margin-bottom: 30px
+
+			img
+				margin-right: 5px
+				height: 14px
+
+		&_text
+			position: relative
+			margin-bottom: 30px
+
+			&::before
+				content: ''
+				position: absolute
+				top: -5px
+				left: 0
+				right: 0
+				margin: 0 auto
+				width: 70px
+				height: 1px
+				background: $text
+
+		&_account
+			display: flex
+			justify-content: flex-end
+			align-items: center
+
+			img
+				display: block
+				width: 20px
+				height: 20px
+				margin-right: 15px
+
+	.reviews__slider
+		margin-bottom: 65px
+
+	.slick-dots
+		bottom: -65px
+
+	.slick-dots
+		li
+			button
+				width: 7px
+				height: 7px
+				background-color: #ffffff
+				opacity: 0.49
+				border-radius: 50%
+				transition: all .6s
+				margin: 0 auto
+				transition: all .6s
+				&::before
+					display: none
+
+		.slick-active
+			button
+				width: 14px
+				height: 14px
+				background-color: #ffffff
+				border-radius: 50%
+				opacity: 1
+
+
+.partners
+	padding: 15px 0
+	box-shadow: 1px 3px 13px rgba(0, 0, 0, 0.32)
+
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		align-items: center
+
+	&__item
+		max-width: 160px
+		min-width: 160px
+
+	img
+		max-height: 45px
+
+
+.footer
+	background-color: #484175
+	padding: 45px 0
+
+	&__logo
+		flex-direction: column
+		justify-content: center
+		font-size: 14px
+
+		img
+			margin: 0 auto 40px
+			width: 64px
+			height: 42px
+
+	&__soc
+		a
+			&:hover
+				img
+					animation: hover .4s linear 1 forwards
+
+			&::before
+				display: none
+
+		img
+			animation: hover-back .4s linear 1 forwards
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		font-size: 14px
+		text-transform: uppercase
+
+		li
+			width: 32%
+			margin-right: 1.333%
+			margin-bottom: 20px
+
+		a
+			position: relative
+			z-index: 1
+			text-transform: uppercase
+			color: #fff
+			font-size: 14px
+
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .3s
+				position: absolute
+				bottom: -5px
+				width: 100%
+				height: 5px
+				background-color: $green
+				z-index: -1
+
+			&:hover,
+			&:focus
+				color: #fff
+				text-decoration: none
+				&::before
+					transform: scale(1)
+		
+		img
+			width: 25px
+			height: 25px
+			margin-right: 13px
+	
+	&__up
+		position: absolute
+		right: 15px
+		top: -45px
+
+		a
+			display: block
+			width: 22px
+			height: 22px
+			background: $green
+
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -10%) rotate(45deg)
+				width: 10px
+				height: 10px
+				border-top: 2px solid $text
+				border-left: 2px solid $text
+				transition: all .6s
+
+			&:hover
+				&::before
+					transform: translate(-50%, -50%) rotate(45deg)
+
+	.container
+		position: relative
+
+
+.terms
+	padding-top: 85px
+	padding-bottom: 75px
+	font-size: 16px
+
+	h2
+		text-align: left
+		margin-bottom: 45px
+
+
+.page--form
+	padding: 110px 0
+	background-image: url(../img/section-form-bg.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+	h3
+		text-transform: uppercase
+		color: #fff
+		font-size: 24px
+		text-align: right
+		margin-bottom: 30px
+
+		span
+			font-weight: 400
+
+	p
+		margin-bottom: 25px
+		color: #fff
+		text-align: center
+		line-height: 1
+
+	&__form
+		box-shadow: 0 0 38px rgba(120, 213, 0, 0.51)
+		border-radius: 5px
+		background-color: rgba(#19113e, 0.2)
+		padding: 30px
+
+		&_line
+			position: relative
+			margin-bottom: 20px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 15px
+				width: 8px
+				height: 12px
+				background: $red
+
+			&::after
+				content: ''
+				position: absolute
+				top: 5px
+				left: 15px
+				border-bottom: 4px solid $text
+				border-left: 4px solid transparent
+				border-right: 4px solid transparent
+				border-top: 4px solid transparent
+
+			&--last
+				margin-bottom: 50px
+
+		&_btn
+			display: flex
+			justify-content: space-between
+			margin-bottom: 30px
+
+		&_link
+			display: flex
+			justify-content: space-between
+			align-items: center
+			line-height: 1
+
+			a
+				color: #fff
+				&:hover,
+				&:focus
+					color: #fff
+					text-decoration: underline
+
+		label
+			position: relative
+			padding-left: 25px
+			color: #fff
+			cursor: pointer
+			margin-bottom: 0
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+
+			&::before
+				width: 15px
+				height: 15px
+				border-radius: 3px
+				border: 1px solid #ffffff
+
+			&::after
+				width: 9px
+				height: 9px
+				border-radius: 3px
+				border: 1px solid #ffffff
+				background: #fff
+				left: 3px
+				top: 3px
+				transition: all .6s
+
+		input[type="checkbox"]
+			display: none
+
+		input[type="checkbox"]:checked + label::after
+			transform: scale(1)
+
+		input[type="checkbox"] + label::after
+			transform: scale(0)
+
+
+.faq
+	padding-top: 85px
+	padding-bottom: 100px
+
+	h2
+		text-align: left
+
+	.block
+		box-shadow: 5px 6px 18px rgba(129, 143, 180, 0.53)
+		border-radius: 5px
+		margin-bottom: 30px
+
+		&__header
+			position: relative
+			text-transform: uppercase
+			font-weight: 700
+			padding: 20px 300px 20px 65px
+
+
+		span
+			position: absolute
+			display: block
+			right: 20px
+			top: 20px
+			width: 38px
+			height: 38px
+			box-shadow: 5px 6px 18px rgba(129, 143, 180, 0.53)
+			border-radius: 5px
+			background: $green
+			transition: all .6s
+			cursor: pointer
+
+			&::before,
+			&::after
+				content: ''
+				background: #fff
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				width: 15px
+				height: 4px
+				transition: all .6s
+
+			&::after
+				transform: translate(-50%, -50%) rotate(-90deg)
+
+
+		&__content
+			padding: 20px 100px 20px 320px
+			text-align: right
+
+	
+	.active
+		span
+			box-shadow: 5px 6px 18px rgba(129, 143, 180, 0.53)
+			background-color: #484175
+
+			&::after
+				transform: translate(-50%, -50%) rotate(0deg)
+
+
+.thanks
+	padding-top: 95px
+	padding-bottom: 150px
+	text-align: center
+
+	&__logo
+		margin-bottom: 25px
+
+	h3
+		margin-bottom: 30px
+		font-weight: 800
+		font-size: 18px
+
+	p
+		text-align: left
+		font-size: 18px
+		margin-bottom: 20px
+
+		br
+			display: none
+
+		a
+			color: $text
+
+			&:hover,
+			&:focus
+				color: $text
+				text-decoration: underline
+
+		span
+			font-size: 24px
+			color: $red
+			font-weight: 800
+
+	&__soc
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 50px
+
+		span
+			font-size: 24px
+			font-weight: 800
+			text-transform: uppercase
+			margin-right: 34px
+
+		a
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 14px
+			text-transform: uppercase
+			width: 145px
+			height: 40px
+			border-radius: 5px
+			padding: 5px 10px
+			color: #fff
+			margin-right: 20px
+			transition: all .6s
+
+			&:last-child
+				margin-right: 0
+
+			&:hover
+				box-shadow: 0 0 15px 0 rgba(0,0,0, .5)
+
+
+		img
+			width: 25px
+			height: 25px
+
+		&_what
+			background-color: #1bd741
+
+		&_in
+			background-image: linear-gradient(to right, #fac063 0%, #dc3871 68%, #6b68ce 100%)
+
+		&_chat
+			background-color: #f3783d
+
+
+.contacts
+	padding: 60px 0
+
+	h2
+		text-align: left
+
+	&__soc
+		margin-bottom: 55px
+
+		a
+			margin-right: 25px
+
+			&:hover
+				img
+					animation: hover .3s linear 1 forwards
+
+		img
+			animation: hover-back .3s linear 1 forwards
+
+	input, textarea
+		height: 40px
+		border-radius: 5px
+		border: 1px solid #b7b7b7
+		background-color: #ffffff
+		color: $text
+
+		&::placeholder
+			color: #898989
+	
+	textarea
+		height: 210px
+		line-height: 1.4
+		padding-top: 10px
+		padding-bottom: 10px
+
+		&::placeholder
+			line-height: 1.4
+
+	&__form
+		div
+			margin-bottom: 20px
+
+		&_textarea
+			margin-bottom: 50px
+
+		&_btn
+			display: flex
+			justify-content: flex-end
+
+			.btn
+				width: 220px
+				font-size: 16px
+				font-weight: 800
+
+
+.reviews--page
+
+	h2
+		text-align: left
+
+	h3
+		margin-bottom: 30px
+		text-transform: uppercase
+
+	&__form
+		padding-top: 70px
+		padding-bottom: 40px
+		background: #ebebeb
+
+		input, textarea
+			background: #fff
+
+			&::placeholder
+				color: #898989
+
+
+		textarea
+			height: 100px
+
+		&_input
+			margin-bottom: 20px
+
+		&_rating
+			display: flex
+			align-items: center
+			margin-bottom: 30px
+			font-size: 16px
+			color: #898989
+			line-height: 1
+
+			div
+				margin-right: 30px
+
+		&_textarea
+			margin-bottom: 30px
+
+	&__content
+		padding: 60px 0
+
+		&_list
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+
+		&_item
+			border: 1px solid #484175
+			width: 24%
+			margin-bottom: 40px
+			overflow: auto
+			
+
+	&__btn
+		display: flex
+		justify-content: flex-end
+
+	.btn
+		font-size: 16px
+		width: 220px
+	
+
+.edit-profile
+	padding: 65px 0
+
+	h2
+		display: flex
+		align-items: center
+
+		span
+			font-size: 18px
+			font-weight: 800
+			margin: 0 15px
+
+		a
+			font-size: 16px
+			color: $text
+
+			&:hover,
+			&:focus
+				color: $text
+				text-decoration: underline
+
+	h3
+		font-size: 16px
+		text-transform: uppercase
+		margin-bottom: 40px
+	
+	input, textarea
+		height: 40px
+		border-radius: 5px
+		border: 1px solid #b7b7b7
+		background-color: #ffffff
+		color: $text
+
+		&::placeholder
+			color: #898989
+
+	&__avatar
+		position: relative
+		width: 170px
+		height: 170px
+
+		img
+			width: 170px
+			height: 170px
+
+		a
+			position: absolute
+			right: -3px
+			top: -3px
+			display: block
+			width: 22px
+			height: 22px
+			border-radius: 5px
+			background-color: #484175
+			animation: hover-back .3s linear 1 forwards
+
+			&:hover,
+			&:focus
+				animation: hover .3s linear 1 forwards
+
+			img
+				width: 60%
+				height: 60%
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+
+	&__form
+		margin-bottom: 35px
+
+		&_input
+			margin-bottom: 25px
+
+
+	&__btn
+		display: flex
+		justify-content: flex-end
+
+	.btn
+		font-size: 16px
+		width: 220px
+
+
+.checkout
+	padding: 65px 0
+
+	h2
+		text-align: left
+
+	h3
+		font-size: 18px
+		text-transform: uppercase
+		margin-bottom: 35px
+
+
+	input, textarea
+		height: 40px
+		border-radius: 5px
+		border: 1px solid #b7b7b7
+		background-color: #ffffff
+		color: $text
+
+		&::placeholder
+			color: #898989
+
+	&__form
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 30px
+			
+		&_checked
+			justify-content: flex-start
+			margin-bottom: 40px
+
+			a
+				color: $text
+				&:hover,
+				&:focus
+					color: $text
+					text-decoration: underline
+
+			label
+				position: relative
+				padding-left: 25px
+				padding-right: 5px
+				cursor: pointer
+				color: #898989
+				margin-bottom: 0
+
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+
+				&::before
+					width: 16px
+					height: 16px
+					border-radius: 3px
+					border: 1px solid $text
+
+				&::after
+					width: 10px
+					height: 10px
+					border-radius: 3px
+					border: 1px solid $text
+					background: $text
+					left: 3px
+					top: 3px
+					transition: all .6s
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label::after
+				transform: scale(1)
+
+			input[type="checkbox"] + label::after
+				transform: scale(0)
+
+		&_radio
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			text-align: center
+			width: 50%
+			margin: 0 auto 10px
+
+			&--end
+				margin-bottom: 30px
+
+			img
+				height: 35px
+
+			label
+				position: relative
+				padding-left: 25px
+				padding-right: 5px
+				cursor: pointer
+				color: #898989
+				margin-bottom: 0
+
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+
+				&::before
+					width: 16px
+					height: 16px
+					border-radius: 3px
+					border: 1px solid $text
+
+				&::after
+					width: 10px
+					height: 10px
+					border-radius: 3px
+					border: 1px solid $text
+					background: $text
+					left: 3px
+					top: 3px
+					transition: all .6s
+
+			input[type="radio"]
+				display: none
+
+			input[type="radio"]:checked + label::after
+				transform: scale(1)
+
+			input[type="radio"] + label::after
+				transform: scale(0)
+
+		&_input
+			position: relative
+			width: 100%
+			margin-bottom: 25px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 15px
+				width: 8px
+				height: 12px
+				background: $red
+
+			&::after
+				content: ''
+				position: absolute
+				top: 5px
+				left: 15px
+				border-bottom: 4px solid #fff
+				border-left: 4px solid transparent
+				border-right: 4px solid transparent
+				border-top: 4px solid transparent
+
+			&--half
+				width: 47%
+	
+	&__btn
+		display: flex
+		justify-content: flex-end
+
+		.btn
+			width: 270px
+
+	&__table
+		width: 100%
+		border-spacing: 7px 11px
+		margin-bottom: 30px
+
+		tr
+			border-bottom: 25px solid #FFF
+
+			&:first-child
+				background-color: #484175
+				color: #fff
+				text-transform: uppercase
+
+		td, th
+			padding: 15px
+
+		th
+			text-transform: uppercase
+
+		td
+			background-color: #ebebeb
+			font-weight: 800
+			font-size: 16px
+
+			&:first-child
+				font-weight: 400
+
+
+.card
+	padding: 80px 0
+
+	h2
+		text-align: left
+
+	.btn
+		width: 270px
+
+	.number
+		display: none
+
+	.button
+		width: 21px
+		height: 21px
+		box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2)
+		border-radius: 5px
+		background-color: #ffffff
+		border: none
+		color: #b1b1b1
+		line-height: 21px
+		margin: 0 5px
+
+		&:hover,
+		&:focus
+			outline: none
+
+	input
+		width: 100%
+		max-width: 50px
+		color: $text
+		border: none
+		font-weight: 800
+		padding: 0
+
+	&__table
+		width: 100%
+		border-spacing: 7px 11px
+		margin-bottom: 30px
+
+		tr
+			border-bottom: 25px solid #FFF
+
+			&:first-child
+				background-color: #484175
+				color: #fff
+				text-transform: uppercase
+
+		td, th
+			padding: 15px
+			margin-bottom: 25px
+
+		th
+			text-transform: uppercase
+
+		td
+			background-color: #ebebeb
+			font-weight: 800
+			font-size: 16px
+
+			&:first-child
+				font-weight: 400
+
+
+.profile
+	padding: 65px 0
+
+	h2
+		display: flex
+		align-items: center
+
+	h3
+		font-size: 18px
+		text-transform: uppercase
+		margin-bottom: 10px
+
+	p
+		margin-bottom: 10px
+		text-transform: uppercase
+
+	&__title
+		display: flex
+		justify-content: space-between
+
+	&__avatar
+		width: 170px
+		height: 170px
+		margin-bottom: 40px
+
+		img
+			width: 170px
+			height: 170px
+
+	&__info
+		margin-bottom: 35px
+	
+	&__balance
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 70px
+		height: 40px
+		background: $text
+		text-transform: uppercase
+		padding: 10px 15px
+		border-radius: 5px
+		color: #fff
+		max-width: 210px
+
+		b
+			color: $green
+			font-size: 18px
+	
+	&__link
+		display: block
+		margin-bottom: 10px
+		text-transform: uppercase
+		color: $text
+		font-size: 16px
+
+		&:hover,
+		&:focus
+			color: $text
+			text-decoration: underline
+	
+	&__table
+		width: 100%
+
+		td, th
+			padding: 15px
+			text-align: center
+
+		tr
+			&:nth-child(even)
+				background-color: #ebebeb
+
+
+.pagination
+	display: flex
+	justify-content: center
+	margin-top: 70px
+	
+	span, a
+		color: $text
+
+	a
+		&:hover,
+		&:focus
+			text-decoration: underline
+
+		&:first-child
+			margin: 0 20px
+			font-weight: 800
+
+		&:last-child
+			margin: 0 20px
+			font-weight: 800
+
+
+.coin
+	padding: 55px 0
+
+	h2
+		text-align: left
+		margin-bottom: 30px
+
+	p
+		line-height: 1
+		margin-bottom: 25px
+		color: #868686
+		text-transform: uppercase
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 30px
+
+		&_item
+			width: 47%
+			background-color: #f7f7f7
+			border-radius: 5px
+			padding: 20px 30px
+
+	&__block
+		background-color: #f7f7f7
+		border-radius: 5px
+		padding: 20px 30px
+		margin-bottom: 40px
+
+	table
+		.btn--coin-active
+			margin-bottom: 0
+
+	.checkout__table
+		td,
+		th
+			padding: 10px
+
+		tr
+			border-bottom: 8px solid #fff
+
+	&__slider
+		margin-bottom: 40px
+	
+	&__price
+		b
+			font-size: 18px
+			color: $text
+			font-weight: 800
+			margin-left: 30px
+
+
+.ui-slider-horizontal .ui-slider-handle
+	width: 18px
+	height: 18px !important
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.56) !important
+	border-radius: 5px !important
+	background-color: #5e5594 !important
+	border: none !important
+
+.ui-slider-horizontal .ui-slider-range
+	background-color: #5e5594 !important
+	border-radius: 5px !important
+	border: 1px solid #fff !important
+
+.ui-widget.ui-widget-content
+	border-radius: 5px !important
+	border: 1px solid #484175 !important
+	height: 12px
 
 @import "page"
 @import "media" // Always at the end

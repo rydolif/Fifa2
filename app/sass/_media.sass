@@ -1,10 +1,139 @@
 
 @media only screen and (max-width : 1200px)
+	
+	h1
+		margin-bottom: 60px
 
 	.header
 
+		&__logo
+			p
+				display: none
+
+		&__btn
+			padding: 5px 0
+	
+	.main
+		margin-top: 105px
+
+	.hero
+		padding: 75px 0
+
+		&__item
+			padding: 105px 20px 20px
+
+	.orders
+		padding: 75px 0
+
+	.nav li
+		font-size: 14px
+
+	.footer
+		&__logo
+			font-size: 12px
+
+			img
+				margin-bottom: 15px
+
+		&__list
+			a
+				font-size: 12px
+
+			img
+				width: 20px
+				height: 20px
+				margin-right: 5px
+
 
 @media only screen and (max-width : 992px)
+	.card__table td
+		font-size: 14px
+
+	.coin
+		table
+			.btn--coin-active
+				font-size: 10px
+				padding: 0 10px
+
+		.checkout__table td
+			&:last-child
+				white-space: nowrap
+		
+		&__slider
+			margin-bottom: 20px
+
+		&__block
+			padding: 15px
+
+		&__container
+			margin-bottom: 20px
+
+			&_item
+				padding: 15px
+
+	.checkout
+		h3
+			font-size: 16px
+			margin-bottom: 15px
+
+		&__form
+			&_checked
+				margin-bottom: 10px
+
+			&_input
+				margin-bottom: 10px
+
+		&__list
+			li
+				padding: 10px
+				margin-bottom: 10px
+
+	.reviews--page__content_item
+		width: 32%
+
+		p
+			font-size: 14px
+
+	.thanks__soc span
+		font-size: 18px
+		margin-right: 15px
+
+	.faq
+		.block
+			&__header
+				padding-right: 85px
+				padding-left: 40px
+
+			&__content
+				padding-left: 85px
+				padding-left: 40px
+
+	.terms
+		font-size: 14px
+	
+	.thanks, 
+	.terms,
+	.faq,
+	.contacts,
+	.reviews--page__content,
+	.edit-profile,
+	.checkout,
+	.card,
+	.profile,
+	.coin
+		padding: 50px 0
+
+	h1
+		font-size: 46px
+		margin-bottom: 45px
+
+	h2
+		margin-bottom: 35px !important
+		font-size: 32px
+
+	.header__container
+		.container
+			padding-right: 60px
 
 	.nav
 		position: fixed
@@ -13,24 +142,28 @@
 		height: 100%
 		flex-direction: column
 		right: -100%
-		top: 80px
+		top: 105px
 		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		background: $block
 		transition: all .3s
 
 		ul
 			display: flex
 			flex-direction: column
 			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
+			margin: 40px
 
 		li
-			margin: 0
-			margin-bottom: 10px
+			margin: 0 0 20px 0
+
+			&:nth-child(even)
+				display: none
 
 		a
 			color: #fff
+
+			&::before
+				bottom: -5px
 		
 		&--active
 			right: 0
@@ -38,22 +171,349 @@
 	.hamburger
 		display: block
 
+	.hero
+		&__item
+			width: 48%
+
+			&:hover
+				width: 48%
+
+	.price__item
+
+		img
+			height: 180px
+
+	
+	.footer
+		&__logo
+			margin-bottom: 30px
+
+			img
+				margin-bottom: 10px
+		
+		&__list
+			li
+				width: 30%
+				margin-right: 3%
+				text-align: center
 
 
 @media only screen and (max-width : 767px)
-	.header
+	.card
+		.button
+			width: 15px
+			height: 15px
+			line-height: 15px
+			padding: 0
+
+		input
+			width: 30px
+
+	.fixed
+		img
+			width: 40px
+			height: 40px
+
+		a
+			width: 40px
+			height: 40px
+
+	.profile
+		&__title
+			flex-wrap: wrap
+			justify-content: space-around
+			margin-bottom: 35px
+
+			.btn
+				margin-bottom: 10px
+
+		&__avatar
+			margin: 0 auto 20px
+
+		&__info
+			text-align: center
+
+		&__balance
+			margin: 0 auto 20px
+
+		&__link
+			text-align: center
+
+		&__table
+			td,
+			th
+				padding: 5px
+				font-size: 10px
+
+	.checkout__table,
+	.card__table
+		tr
+			border-bottom: 5px solid #fff
+
+		td, th
+			padding: 3px
+
+		td
+			font-size: 10px
+			width: auto
+
+		th
+			font-size: 10px
+			width: auto
+
+	.reviews--page
+
+		&__content_item
+			width: 47%
+
+		&__form_rating
+			margin-bottom: 15px
+
+	.thanks
+		p
+			margin-bottom: 10px
+			font-size: 14px
+
+			br
+				display: block
+
+			span
+				font-size: 18px
+
+		&__soc
+			flex-wrap: wrap
+			justify-content: space-around
+			margin-top: 30px
+
+			a
+				margin-right: 0
+				margin-bottom: 10px
+				width: 150px
+
+			span
+				width: 100%
+				margin-right: 0
+				margin-bottom: 15px
+
+	h2
+		font-size: 26px
+
+	.hero
+		padding: 40px 0
+
+		&__block
+			flex-wrap: wrap
+
+		&__item
+			width: 100%
+			margin-bottom: 15px
+			padding: 20px
+
+			&:hover
+				width: 100%
+
+			img
+				margin-bottom: 15px
+
+	.price__item
+		max-width: 100%
+		width: 48%
+		margin-bottom: 25px
+
+		img
+			margin-bottom: 10px
+
+	.why__item
+		width: 45%
+
+	.partners__item
+		width: 30%
+
+		img
+			display: block
+			margin: 0 auto 20px
+
+	.orders, .price, .why, .reviews, .reviews--page__form
+		padding: 40px 0
+
 
 @media only screen and (max-width : 576px)
-	.header
+	h1
+		font-size: 36px
+		margin-bottom: 30px
+
+	h2
+		font-size: 22px
+		margin-bottom: 20px !important
+
+	.edit-profile
+		&__avatar
+			margin: 0 auto 20px
+
+		h3
+			margin-bottom: 10px
+
+		&__form
+			margin-bottom: 20px
+
+			&_input
+				margin-bottom: 10px
+
+	.checkout
+		&__form
+			&_input
+				&--half
+					width: 100%
+
 
 @media only screen and (max-width : 480px)
+	.card
+		.button
+			width: 15px
+			height: 15px
+			line-height: 15px
+			margin: 0 auto
+
+
+		input
+			width: 10%
+
+	.fixed
+		img
+			width: 30px
+			height: 30px
+
+		a
+			width: 30px
+			height: 30px
+
+	.checkout
+		&__list
+			span, b
+				font-size: 12px
+
+			b
+				font-size: 12px
+				white-space: nowrap
+
+			&_total
+				padding: 15px !important
+
+		&__form_radio
+			width: 100%
+
+	.reviews--page__content_item
+		width: 100%
+
+	.contacts__soc a
+		margin-right: 10px
+
+	.faq
+		.block
+			span
+				right: 5px
+				top: 5px
+				width: 30px
+				height: 30px
+
+			&__header
+				padding: 20px 20px
+
+			&__content
+				padding: 0 20px 20px
+
 	.header
+		&__btn
+			display: none
+
+		&__logo
+			p
+				display: none
+
+	.btn
+		font-size: 12px
+
+		&--green
+			width: 100%
+
+	.nav
+		top: 55px
+
+		&__btn
+			display: block
+			margin: 40px
+
+			a
+				margin-bottom: 15px
+
+	.main
+		margin-top: 55px
+
+	.price__item
+		img
+			height: 155px
+		.btn
+			width: 130px
+
+	.partners__item
+		width: 100%
+
+	.why
+		&__item
+			padding: 15px 0
+
+		img
+			margin-bottom: 15px
+	
+	.footer__list li
+		width: 100%
+		margin-right: 0
+		margin-bottom: 10px
+
+	.slick-slide
+		margin: 0 2px
+
+	.page--form
+		padding: 50px 0
+
+		&__form
+			padding: 10px
+	
+	.header
+		&__account
+			font-size: 9px
+
+			img
+				width: 12px
+				margin: 0 3px
+
+			p
+				width: 180px
+
+		&__logo img
+			width: 25px
+
+		&__col
+
+
+			span
+				right: 0px
+				top: -5px
+
+			img
+				width: 15px
+				margin: 0 3px
+
+		&__language
+			right: 0
+			a, span
+				font-size: 11px
 
 
 
-
-
-
+	.coin__container_item
+		width: 100%
+		margin-bottom: 15px
 
 
 

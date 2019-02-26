@@ -2,7 +2,7 @@
 
 
 //----------------------fonts---------------------
-$fonts: 'GothamPro', sans-serif
+$fonts: 'Geometria', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
@@ -21,7 +21,7 @@ body
 	font-family: $fonts
 	font-size: 14px
 	color: $text
-	line-height: 1.75
+	line-height: 1.4
 	font-weight: 400
 
 ::selection
@@ -37,10 +37,30 @@ section
 	overflow: hidden
 	
 h1, h2, h3, h4, h5, h6
-	font-weight: 700
-	line-height: 1.4
+	font-weight: 800
+	line-height: 1.1
 	margin: 0
 	padding: 0
+
+h1
+	font-size: 60px
+	color: #fff
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 120px
+
+	span
+		font-weight: 400
+		color: $green
+
+h2
+	font-size: 36px
+	margin-bottom: 75px
+	text-align: center
+	text-transform: uppercase
+
+	span
+		font-weight: 400
 
 ul
 	margin: 0
@@ -53,29 +73,34 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
-	border-radius: 0
+	height: 40px
+	line-height: 40px
+	border-radius: 5px
+	border: 1px solid #ffffff
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	background-color: transparent
+	padding: 0 30px
+	color: #fff
+	width: 100%
 	
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: $red
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: #808080
+		border-color: $green
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
-		line-height: 1
+		color: #fff
+		font-size: 14px
+		line-height: 40px
 
 b, strong
 	font-weight: 700
@@ -89,6 +114,26 @@ a:focus,
 a:hover
 	outline: none
 	text-decoration: none
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+
+input[type="number"]
+	-moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus
+	-moz-appearance: number-input
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
 
 @import "_base/preloader"
 @import "_base/animation"

@@ -15,14 +15,121 @@
 	letter-spacing: .2px
 	border-radius: 5px
 	border: 1px solid $red
+	font-weight: 800
+	transition: all .6s
 
 	&:hover,
 	&:focus
 		outline: none
-		border: none
 		text-decoration: none
 		cursor: pointer
 		transition: all .3s
 		box-shadow: 0 5px 10px rgba($text, .4)
-		color: #3f7a05
+		color: $red
+		background: #fff
 
+	&--price
+		width: 150px
+
+	&--green
+		background: transparent
+		width: 270px
+		border: 1px solid #fff
+
+		&:hover,
+		&:focus
+			color: #000
+			background: $green
+			border: 1px solid $green
+
+		&__active
+			display: flex
+			justify-content: space-between
+			align-items: center
+			color: #fff
+			background: $green
+			border: 1px solid $green
+			width: 100%
+			margin-bottom: 20px
+			font-weight: 400
+			padding: 0 20px
+
+			&:hover,
+			&:focus
+				color: #fff
+				background: transparent
+				border: 1px solid $green
+
+			img
+				margin-right: 30px
+
+		&__hover
+			color: $green
+			background: transparent
+			border: 1px solid $green
+			width: 45%
+
+			&:hover,
+			&:focus
+				color: #fff
+				background: $green
+				border: 1px solid $green
+
+	&--blue
+		display: flex
+		justify-content: space-between
+		align-items: center
+		background: #4267b2
+		font-weight: 400
+		border: 1px solid #4267b2
+		padding: 0 20px
+		width: 100%
+		margin-bottom: 20px
+
+		&:hover,
+		&:focus
+			border: 1px solid #4267b2
+			color: #fff
+			background: transparent
+
+		img
+			margin-right: 30px
+
+	&--profile
+		background: $text
+		border: 1px solid $text
+
+		&:hover,
+		&:focus
+			background: #fff
+			border: 1px solid $text
+			color: $text
+	
+	&--coin
+		background: $text
+		border: 1px solid $text
+		margin-bottom: 20px
+		width: 100%
+		color: #fff
+		font-size: 16px
+
+		&:hover,
+		&:focus
+			background: $text
+			border: 1px solid $text
+			color: #fff
+
+
+		&-active
+			background: #fff
+			border: 1px solid $text
+			margin-bottom: 25px
+			width: 100%
+			color: $text
+			font-size: 16px
+
+			&:hover,
+			&:focus
+				background: #fff
+				border: 1px solid $text
+				color: $text
