@@ -12,11 +12,35 @@
 
 	&--active, &--menu
 
+	&__bunner
+		display: flex
+		align-items: center
+		justify-content: center
+		text-transform: uppercase
+		width: 100%
+		height: 50px
+		line-height: 1
+		width: 55%
+		border: 1px solid $red
+		font-weight: 800
+		transition: all .6s
+		letter-spacing: .2px
+		border-radius: 5px
+		text-align: center
+		color: $red
+		padding: 0 15px
+		margin: 0 10px
+
+		&:hover
+			color: #fff
+			background: $red
+
 
 	&__container
 		position: relative
 		background: $block
 		padding: 10px 0
+
 
 	&__btn
 		background: #fff
@@ -1103,32 +1127,34 @@
 					height: 16px
 					border-radius: 3px
 					border: 1px solid $text
+					top: 50%
+					transform: translate(0, -50%)
 
 				&::after
-					width: 10px
-					height: 10px
+					width: 11px
+					height: 11px
 					border-radius: 3px
 					border: 1px solid $text
 					background: $text
-					left: 3px
-					top: 3px
+					left: 2px
 					transition: all .6s
+					top: 50%
+					transform: translate(0, -50%)
 
 			input[type="checkbox"]
 				display: none
 
 			input[type="checkbox"]:checked + label::after
-				transform: scale(1)
+				display: block
 
 			input[type="checkbox"] + label::after
-				transform: scale(0)
+				display: none
 
 		&_radio
 			display: flex
 			justify-content: flex-start
 			align-items: center
 			text-align: center
-			width: 50%
 			margin: 0 auto 10px
 
 			&--end
@@ -1156,25 +1182,28 @@
 					height: 16px
 					border-radius: 3px
 					border: 1px solid $text
+					top: 50%
+					transform: translate(0, -50%)
 
 				&::after
-					width: 10px
-					height: 10px
+					width: 11px
+					height: 11px
 					border-radius: 3px
 					border: 1px solid $text
 					background: $text
-					left: 3px
-					top: 3px
+					left: 2px
 					transition: all .6s
+					top: 50%
+					transform: translate(0, -50%)
 
 			input[type="radio"]
 				display: none
 
 			input[type="radio"]:checked + label::after
-				transform: scale(1)
+				display: block
 
 			input[type="radio"] + label::after
-				transform: scale(0)
+				display: none
 
 		&_input
 			position: relative
