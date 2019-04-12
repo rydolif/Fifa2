@@ -1498,5 +1498,20 @@
 	border: 1px solid #484175 !important
 	height: 12px
 
+
+.select
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translate(0, -50%) rotate(-135deg)
+		width: 10px
+		height: 10px
+		border-top: 3px solid #000
+		border-left: 3px solid #000
+
 @import "page"
 @import "media" // Always at the end
