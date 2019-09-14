@@ -4,14 +4,82 @@
 	h1
 		margin-bottom: 60px
 
+	.auction
+		h2
+			font-size: 28px !important
+
+		h3
+			font-size: 23px
+			margin-bottom: 25px
+
+		h4
+			font-size: 18px
+
+		.coin__slider
+			margin-bottom: 15px
+
+		&__line
+			margin-bottom: 65px
+
+			.big
+				font-size: 18px
+
+			.btn
+				font-size: 14px
+
+		&__cart
+			width: 190px
+
+		&__list
+			img
+				width: 30px
+
+			a
+				padding: 3px 3px 20px 3px
+
+		&__item p
+			font-size: 19px
+
+		&__search
+			height: 122px
+
+			img
+				width: 40px
+				height: auto
+
+
 	.header
 
 		&__logo
-			p
-				display: none
+			font-size: 14px
+
+			img
+				width: 35px
 
 		&__btn
 			padding: 5px 0
+
+		&__bunner
+			font-size: 11px
+
+		.btn
+			font-size: 11px
+			padding: 0 25px
+
+		&__account
+			font-size: 13px
+			text-transform: none
+
+			ul
+				width: 120px
+
+		&__language
+			ul
+				width: auto
+
+	.nav
+		a
+			font-size: 12px
 	
 	.main
 		margin-top: 105px
@@ -46,14 +114,159 @@
 
 
 @media only screen and (max-width : 992px)
-	.header
-		&__btn
-			.btn
-				display: none
+	.orders
+		&__title
+			a
+				color: $block
 
-		&__bunner
-			margin: 0 auto
+		&__item
+			width: 48%
+			margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 0
+
+
+	.why
+		&__item
+			width: 24%
+
+		&__previews
 			width: 100%
+			order: -1
+
+
+	.article
+		p, time
+			font-size: 16px
+
+		time
+			margin-bottom: 15px
+
+	.crums
+		font-size: 16px
+
+	.news
+		&__article
+			padding: 25px 0
+
+			p, time
+				font-size: 16px
+
+		&__tags
+			a
+				padding: 10px
+				font-size: 14px
+				margin-bottom: 5px
+
+			li
+				margin-right: 10px
+
+		&__pagination
+			a, 
+			span
+				padding: 5px
+				min-width: auto
+
+
+	.buy-coins
+		h2
+			font-size: 25px
+
+			span
+				font-size: 25px
+
+		select
+			font-size: 13px
+			padding-right: 20px
+
+		input
+			width: 130px
+			font-size: 12px
+			padding: 0 15px
+
+			&::placeholder
+				font-size: 12px
+
+		p
+			font-size: 16px
+
+		.btn
+			font-size: 12px
+
+
+		&__row
+			padding: 25px
+
+		&__list a
+			font-size: 13px
+			font-weight: 500
+
+		.checkout__table td,
+		.checkout__table th
+			font-size: 16px
+
+		&__table
+			th
+				padding: 20px !important
+
+			td
+				span,
+				b
+					font-size: 16px
+
+
+	.auction
+		h2
+			font-size: 20px !important
+			margin-bottom: 20px !important
+
+		h3
+			font-size: 17px
+
+		h4
+			font-size: 14px
+
+		p
+			font-size: 14px
+
+		&__place p
+			font-size: 10px
+
+		.btn
+			width: 120px
+			font-size: 11px
+
+		&__line 
+			.big
+				font-size: 14px
+
+				img
+					height: 28px
+
+			&--search
+				.btn
+					width: 11%
+
+		p
+			margin-bottom: 15px
+
+		&__cart
+			width: 140px
+
+		&__list img
+			width: 23px
+		
+		&__col
+			width: 34%
+
+			&:nth-child(2)
+				width: 28%
+
+		&__item img
+			width: 15px
+
+
 
 	.card__table td
 		font-size: 14px
@@ -140,9 +353,29 @@
 		margin-bottom: 35px !important
 		font-size: 32px
 
-	.header__container
-		.container
-			padding-right: 60px
+	.header
+		&__btn
+			.btn
+				display: none
+
+		&__bunner
+			margin: 0 auto
+			width: 100%
+
+		&__card
+			img
+				width: 20px
+
+		&__logo
+			p
+				font-size: 10px
+
+			img
+				width: 22px
+
+		&__container
+			.container
+				padding-right: 70px
 
 	.nav
 		position: fixed
@@ -151,7 +384,7 @@
 		height: 100%
 		flex-direction: column
 		right: -100%
-		top: 105px
+		top: 98px
 		z-index: -1
 		background: $block
 		transition: all .3s
@@ -188,6 +421,9 @@
 	.hamburger
 		display: block
 
+	.main
+		margin-top: 98px
+
 	.hero
 		&__item
 			width: 48%
@@ -199,6 +435,13 @@
 
 		img
 			height: 180px
+
+	.partners__item
+		margin-bottom: 10px
+		width: 32%
+		min-width: auto
+		max-width: 100%
+		text-align: center
 
 	
 	.footer
@@ -216,6 +459,126 @@
 
 
 @media only screen and (max-width : 767px)
+	.price .white b
+		font-size: 32px
+
+	.orders
+		h2
+			font-size: 32px
+
+		&__item
+			width: 100%
+
+		&__title
+			margin-bottom: 20px
+
+			a
+				color: $block
+				font-size: 16px
+
+	.comfort
+		&__form
+			&_col
+				width: 100%
+
+			input
+				height: 45px
+				line-height: 45px
+
+			textarea
+				margin-top: 0
+
+			&_remember label
+				font-size: 14px
+
+			label
+				font-size: 14px
+
+		ol
+			font-size: 14px
+
+		h3
+			font-size: 24px
+
+
+
+	.buy-coins
+		.coin__container
+			margin-bottom: 0
+
+		&__now
+			justify-content: center
+
+			.btn
+				margin-top: 20px
+
+		&__list
+			a
+				padding: 15px 5px
+
+			li
+				margin-right: 10px
+
+		.checkout__table td,
+		.checkout__table th
+			font-size: 14px
+			padding: 5px !important
+
+		&__table td 
+			b, span
+				font-size: 12px
+
+	.auction
+		h4
+			font-size: 18px
+
+		&__col
+			width: 100%
+
+		.tabs
+			.auction__col
+				&:nth-child(2)
+					order: -1
+					width: 48%
+					margin-bottom: 15px
+
+				&:nth-child(3)
+					order: -1
+					width: 48%
+					margin-bottom: 15px
+
+		&__item
+			width: 100%
+			margin-bottom: 15px
+
+			p
+				justify-content: flex-start
+
+
+		&__line
+			margin-bottom: 30px
+
+			&--search
+				input
+					width: 100%
+					order: -2
+
+			&--start img
+				width: 50%
+				margin: 0 auto 15px
+
+		&__search
+			width: 100%
+			order: -1
+			margin-bottom: 20px
+
+		.btn
+			display: block
+			font-size: 14px
+			width: 175px
+			border-radius: 5px !important
+			margin: 0 auto
+
 	.card
 		.button
 			width: 15px
@@ -316,10 +679,11 @@
 		font-size: 26px
 
 	.hero
-		padding: 40px 0
+		padding: 60px 0 40px
 
 		&__block
 			flex-wrap: wrap
+			margin-bottom: 0
 
 		&__item
 			width: 100%
@@ -381,9 +745,55 @@
 			&_input
 				&--half
 					width: 100%
+	
+	.buy-coins__now
+		padding: 15px
+
+	.news
+		&__pagination
+			a, 
+			span
+				font-size: 13px
+
+			i
+				display: none
+
+			&_btn
+
+				&--next
+					padding-right: 5px !important
+
+				&--prev
+					padding-left: 5px !important
+
+		&__article
+			p, time
+				font-size: 14px
+
+	.article
+		p, time
+			font-size: 14px
+
+		h2
+			font-size: 18px !important
+
+	.crums
+		font-size: 14px
 
 
 @media only screen and (max-width : 480px)
+	.orders__item
+		padding: 15px
+
+		p
+			font-size: 14px
+
+		a
+			font-size: 18px
+
+		time
+			font-size: 16px
+
 	.card
 		.button
 			width: 15px
@@ -520,4 +930,40 @@
 		margin-bottom: 15px
 
 
+	.buy-coins
+		&__list
+			a
+				font-size: 8px
 
+			li
+				margin-right: 5px
+
+		.checkout__table td,
+		.checkout__table th
+			font-size: 7px
+			padding: 5px !important
+
+		&__table
+			td 
+				b, span
+					font-size: 7px
+
+			.btn
+				font-size: 10px
+				width: auto
+				height: 25px
+				line-height: 25px
+
+			select
+				font-size: 7px
+
+		&__now
+			padding: 10px 5px
+
+			input
+				margin-bottom: 10px
+			
+			.btn
+				margin-top: 0
+
+	

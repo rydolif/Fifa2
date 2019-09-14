@@ -12,6 +12,10 @@
 
 	&--active, &--menu
 
+	&__wrap
+		display: flex
+		align-items: center
+
 	&__bunner
 		display: flex
 		align-items: center
@@ -61,6 +65,9 @@
 			width: 40px
 			margin-right: 10px
 
+	&__card
+		margin-right: 15px
+
 	&__language
 		position: relative
 		right: 0
@@ -74,6 +81,7 @@
 		text-transform: uppercase
 		padding: 5px 0
 		font-size: 16px
+		margin-right: 15px
 
 		&::after
 			content: ''
@@ -84,7 +92,6 @@
 			transform: translate(0, -1px) rotate(-135deg)
 			margin-left: 4px
 
-
 		&:hover,
 		&:focus
 			p
@@ -92,6 +99,9 @@
 
 			ul
 				display: block
+
+		&:last-child
+			margin-right: 0
 
 		span
 			display: block
@@ -426,6 +436,7 @@
 		font-size: 18px
 		color: #000
 		padding: 30px
+		box-shadow: 0 0 10px 0  rgba($block, .4)
 
 		p
 			margin-bottom: 10px
@@ -1605,13 +1616,16 @@
 	&::before
 		content: ''
 		position: absolute
-		right: 10px
+		right: 3px
 		top: 50%
 		transform: translate(0, -50%) rotate(-135deg)
 		width: 10px
 		height: 10px
 		border-top: 3px solid #000
 		border-left: 3px solid #000
+	
+	select
+		padding-right: 20px
 
 
 .article
@@ -1656,6 +1670,11 @@
 
 	a, span
 		color: #484079
+
+	a
+		&:hover,
+		&:focus
+			text-decoration: underline
 
 
 .news
@@ -1965,6 +1984,12 @@
 
 .buy-coins
 
+	h2
+		span
+			font-size: 36px
+			font-weight: 400
+			color: #484175
+
 	select
 		font-size: 18px
 
@@ -1973,6 +1998,7 @@
 		color: #000
 		margin-bottom: 50px
 		text-align: center
+		text-transform: none
 
 	span
 		display: inline-block
@@ -2101,6 +2127,7 @@
 		font-size: 24px
 		color: #000
 		margin-bottom: 15px
+		font-weight: 700
 
 	p
 		color: #000
@@ -2127,6 +2154,7 @@
 		&--start
 			justify-content: flex-start
 			flex-wrap: wrap
+			margin-bottom: 0 !important
 
 			img
 				width: 22%
@@ -2139,6 +2167,7 @@
 				width: 89%
 				font-size: 18px
 				border-radius: 0
+				color: #000
 
 				&::placeholder
 					color: #000
@@ -2185,6 +2214,7 @@
 
 	&__list
 		display: flex
+		flex-wrap: wrap
 
 		li
 			margin-right: 5px
@@ -2274,6 +2304,7 @@
 		img
 			width: 57px
 			height: 57px
+			margin-right: 25px
 
 		label
 			position: relative
@@ -2286,10 +2317,11 @@
 			background-color: #e4e4e4
 			width: 100%
 			transition: all .6s
+			font-size: 18px
 
 		input[type="radio"]
 			display: none
-
+	
 		input[type="radio"]:checked + label
 			background-color: #fe015d
 			color: #fff
