@@ -30,6 +30,12 @@
 
 	&--price
 		width: 150px
+		background-color: $block
+
+		&:hover,
+		&:focus
+			border-color: $block
+			color: $block
 
 	&--green
 		background: transparent
@@ -41,6 +47,9 @@
 			color: #000
 			background: $green
 			border: 1px solid $green
+
+		span
+			font-weight: 400
 
 		&__active
 			display: flex
