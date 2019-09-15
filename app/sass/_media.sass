@@ -714,13 +714,20 @@
 			img
 				margin-bottom: 15px
 
-	.price__item
-		max-width: 100%
-		width: 48%
-		margin-bottom: 25px
+	.price
+		padding-bottom: 0
+		padding-top: 40px
+		&__img
+			top: 40%
+			height: 123%
 
-		img
-			margin-bottom: 10px
+		&__item
+			max-width: 100%
+			width: 48%
+			margin-bottom: 25px
+
+			img
+				margin-bottom: 10px
 
 	.why__item
 		width: 45%
@@ -732,8 +739,12 @@
 			display: block
 			margin: 0 auto 20px
 
-	.orders, .price, .why, .reviews, .reviews--page__form
+	.orders, .why, .reviews, .reviews--page__form
 		padding: 40px 0
+
+	.footer__list li
+		width: 100%
+		margin-right: 0
 
 
 @media only screen and (max-width : 576px)
