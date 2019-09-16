@@ -32,7 +32,7 @@
 
 		&__list
 			img
-				width: 30px
+				width: 40px
 
 			a
 				padding: 3px 3px 20px 3px
@@ -229,7 +229,6 @@
 				b
 					font-size: 16px
 
-
 	.auction
 		h2
 			font-size: 20px !important
@@ -269,7 +268,7 @@
 			width: 140px
 
 		&__list img
-			width: 23px
+			width: 30px
 		
 		&__col
 			width: 34%
@@ -473,6 +472,14 @@
 
 
 @media only screen and (max-width : 767px)
+	.orders
+		background-image: url(../img/orders--bg.png)
+		background-size: cover
+		background-repeat: no-repeat
+
+		&__bg
+			display: none
+
 	.profile--new__avatar
 		width: 50%
 		margin: 0 auto 20px
@@ -739,12 +746,18 @@
 			display: block
 			margin: 0 auto 20px
 
-	.orders, .why, .reviews, .reviews--page__form
+	.orders, .why, .reviews, .reviews--page__form, .news, .article, .profile--new, .buy-coins
 		padding: 40px 0
+
+	.crums
+		margin-bottom: 15px
 
 	.footer__list li
 		width: 100%
 		margin-right: 0
+
+	h2
+		margin-bottom: 25px !important
 
 
 @media only screen and (max-width : 576px)
@@ -996,3 +1009,5 @@
 				margin-top: 0
 
 	
+	.news, .article, .profile--new, .buy-coins
+		padding-top: 60px
