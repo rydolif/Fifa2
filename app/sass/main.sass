@@ -354,6 +354,10 @@
 		text-align: left
 		margin-bottom: 15px
 		color: #fff
+		
+		b
+			font-family: $title
+			letter-spacing: 3px
 
 	.white
 		color: #fff
@@ -1643,11 +1647,11 @@
 		display: block
 		margin-bottom: 45px
 		color: rgba(#000, .8)
-		font-size: 20px
+		font-size: 16px
 		font-weight: 700
 
 	p
-		font-size: 20px
+		font-size: 16px
 		margin-bottom: 10px
 		color: rgba(#000, .8)
 
@@ -1722,7 +1726,7 @@
 	&__more
 		display: inline-block
 		color: #403b61
-		font-size: 20px
+		font-size: 18px
 		margin-bottom: 20px
 
 		&::before,
@@ -1766,7 +1770,7 @@
 			display: block
 			border: 1px solid #b3b3b3
 			padding: 10px 20px
-			font-size: 18px
+			font-size: 16px
 			line-height: 1
 			margin-right: 1px
 			color: #000
@@ -2158,15 +2162,91 @@
 		align-items: center
 		margin-bottom: 80px
 
+		&_cart
+			position: relative
+			width: 18%
+			margin-right: 2%
+			margin-bottom: 2%
+			color: #ecb848
+			font-size: 1.3em
+			white-space: nowrap
+			font-family: 'OpenSans', sans-serif
+
+			&:hover,
+			&:focus
+				color: #ecb848
+
+			&--tabs
+				width: 100%
+				font-size: 1.2em
+
+				.auction__line_cart--price img
+					width: 10px
+
+			&--list
+				width: 100%
+				font-size: .7em
+
+				.auction__line_cart--lico
+					width: 45%
+				.auction__line_cart--name
+					top: 63%
+
+				.auction__line_cart--price
+					top: 105px
+					font-size: 1em
+					img
+						width: 8px
+
+				.auction__line_cart--team
+					top: 50%
+
+			&--fon
+				width: 100%
+
+			&--lico
+				position: absolute
+				left: 50%
+				top: 40%
+				transform: translate(-50%, -50%)
+				width: 60%
+
+			&--name
+				position: absolute
+				left: 50%
+				top: 70%
+				transform: translate(-50%, -50%)
+				z-index: 1
+
+			&--country
+				position: absolute
+				left: 20%
+				top: 38%
+				transform: translate(-50%, -50%)
+				z-index: 1
+				width: 15%
+
+			&--team
+				position: absolute
+				left: 20%
+				top: 55%
+				transform: translate(-50%, -50%)
+				width: 15%
+
+			&--price
+				position: absolute
+				left: 50%
+				top: 80%
+				transform: translate(-50%, -50%)
+				font-size: 1.1em
+
+				img
+					width: 14px
+
 		&--start
 			justify-content: flex-start
 			flex-wrap: wrap
 			margin-bottom: 0 !important
-
-			img
-				width: 18%
-				margin-right: 2%
-				margin-bottom: 2%
 
 		&--search
 			input
@@ -2215,10 +2295,16 @@
 	&__col
 		width: 31%
 
+		&:nth-child(2)
+			width: 15%
+
+		&:nth-child(3)
+			width: 45%
+
 	&__cart
 		display: block
 		margin: 0 auto
-		width: 200px
+		width: 100%
 
 	&__list
 		display: flex
@@ -2226,12 +2312,10 @@
 
 		li
 			margin-right: 5px
+			width: 100px
 
 			&:last-child
 				margin-right: 0
-
-		img
-			width: 50px
 
 		a
 			position: relative
@@ -2297,7 +2381,6 @@
 		img
 			margin-right: 5px
 
-	
 	&__search
 		width: 89%
 		height: 156px

@@ -27,12 +27,7 @@
 			.btn
 				font-size: 14px
 
-		&__cart
-			width: 190px
-
 		&__list
-			img
-				width: 40px
 
 			a
 				padding: 3px 3px 20px 3px
@@ -264,21 +259,18 @@
 		p
 			margin-bottom: 15px
 
-		&__cart
-			width: 140px
-
-		&__list img
-			width: 30px
-		
-		&__col
-			width: 34%
-
-			&:nth-child(2)
-				width: 28%
 
 		&__item img
 			width: 15px
 
+	.auction__line_cart
+		font-size: 1.1em
+
+	.auction__line_cart--tabs
+		font-size: 1em
+
+	.auction__list a
+		font-size: .8em
 
 
 	.card__table td
@@ -588,10 +580,6 @@
 					width: 100%
 					order: -2
 
-			&--start img
-				width: 50%
-				margin: 0 auto 15px
-
 		&__search
 			width: 100%
 			order: -1
@@ -603,6 +591,19 @@
 			width: 175px
 			border-radius: 5px !important
 			margin: 0 auto
+	
+	.auction__line_cart
+		width: 31%
+
+		&--tabs
+			width: 100%
+
+			.auction__line_cart--name
+				font-size: 1.5em
+
+		&--list
+			width: 100%
+
 
 	.card
 		.button
@@ -821,9 +822,18 @@
 
 	.crums
 		font-size: 14px
-
+	
+	.auction__line_cart--team
+		top: 49%
 
 @media only screen and (max-width : 480px)
+	.tabs
+		flex-wrap: wrap
+
+		.auction__col
+			&:nth-child(3)
+				width: 100% !important
+
 	.orders__item
 		padding: 15px
 
